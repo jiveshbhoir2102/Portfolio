@@ -1,0 +1,287 @@
+:root{
+    --text-color:#1a1c20;
+    --link-color:#4a76ee;
+    --background-color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--background-color);
+}
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+/*Navbar*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+    height: 80px;
+}
+nav .left a{
+    color: crimson;
+    font-size: 22px;
+    font-weight: 600;
+}
+nav .right a:hover{
+    font-size: 20px;
+    color: blue;
+}
+nav .right a{
+    color: black;
+    margin: 0 10px; 
+}
+nav .right a:last-child:hover{
+    color: aqua;
+    font-size: 19px;
+}
+nav .right a:last-child{
+    color: white;
+    background-color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+/* Section 1: Hero */
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+.hero-section.text{
+    flex: 5;
+}
+.hero-section .text h2{
+    font-size: 45px;
+}
+.hero-section .text .links{
+    margin-top: 25px;
+   
+}
+
+.hero-section .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-right:5px;
+    margin-left:10px;
+}
+
+.hero-section .text .links a:hover{
+    color: black;
+    font-size: bold;
+}
+.hero-section.headshot{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+.hero-section .headshot img{
+    width: 300px;
+    border-radius: 50%;
+}
+
+
+/* Section 2: Skills*/
+ .skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+ }
+
+.skills-section h2{
+    text-align: center;
+    font-size: 35px;
+    color: darkred;
+}
+.skills-section .text{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: deeppink;
+}
+
+.skills-section .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skills-section .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 200px;
+    padding: 10px 20px;
+    border:  1.5px solid #d3d3d3;
+    border-radius: 5px;
+
+}
+.skills-section .cells .cell img{
+    width: 50px;
+    height: 30px;
+
+}
+.skills-section .cells .cell:hover{
+    border:  4px solid indigo;
+  font-size: 23px;
+  color: #4a76ee;
+}
+/*  Section 3: About Section */
+
+.About-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+  }
+  .About-section h2{
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+
+  .About-section .group{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .About-section .group .person-details{
+    text-align: center;
+    flex: 2;
+
+  }
+  .About-section .group .person-details img{
+    width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    border: 4px solid lightseagreen;
+  }
+ 
+  .About-section .group .person-details p{
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .About-section .group .person-details p:last-child{
+    font-size: 18px;
+    color: teal;
+  }
+  .About-section .group .text{
+    flex: 8;
+    font-size: 29px;
+    color: midnightblue;
+  }
+
+/* Section 3: Projects*/
+
+.project{
+    padding: 0 50px;
+    margin-bottom: 100px;
+ }
+
+/* .project h2{
+    text-align: center;
+    font-size: 35px;
+    color: green;
+} */
+.project .text{
+    /* text-align: center; */
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: darkslategray;
+}
+
+.project .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.project .cells .cell{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin: 10px;
+    width: 500px;
+    padding: 10px 40px;
+    border:  1.5px solid #d3d3d3;
+    border-radius: 5px;
+
+}
+
+
+.project .cells .cell img{
+    width: 450px;
+    height: 180px;
+
+}
+.project .cells .cell:hover{
+    border:   4px solid deeppink;
+  font-size: 29px;
+  color: navy;
+}
+.project .cells .cell img:hover{
+    font-size: 20px;
+}
+
+
+
+@media(max-width:600px){
+    /*Section 1: Hero */
+    .hero-section{
+        flex-direction: column-reverse;
+    }
+    .hero-section .headshot img{
+        width: 300px;
+    }
+    /* Section 3: About */
+    .About-section {
+        text-align: center;
+    }
+    .About-section .group{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:900px){
+    /*NAVBAR */
+    nav{
+        padding: 0 20px;
+    }
+    nav .right a{
+        font-size: 22px;
+    }
+    nav .right a:last-child{
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav .right a span{
+        display: none;
+    }
+
+    /* Section 1: Hero */
+    .hero-section{
+        padding: 0 20px;
+    }
+    .hero-section .text h2{
+        font-size: 30px;
+    }
+
+    
+
+  
+}
+    
+
